@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+<div class="row">
+<div class="col-7">
+<img src="11.png" style="height:70%;width:100%"></img>
+</div>
+<div class="col-5">
+  <h2 style="text-align:center;color:deeppink;font-size:50px">BECOME A MEMBER<br></h2>
+  <form action="/action_page.php" class="was-validated">
+    <div class="form-group">
+      <label for="uname" style="color:deeppink">Username:</label>
+      <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-group">
+      <label for="pwd" style="color:deeppink">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+<div class="form-group">
+      <label for="Contact" style="color:deeppink">Contact Number:</label>
+      <input type="text" class="form-control" id="Contact" placeholder="Enter your contact number" name="pswd" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+ <div class="form-group">
+      <label for="email" style="color:deeppink">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter valid email" name="pswd" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <center>
+    <div class="form-group form-check text-align-center">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" name="remember" required> I agree on Terms of User.
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Check this checkbox to continue.</div>
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Sign Up</button></center>
+  </form>
+</div>
+</div>
+</body>
+</html>

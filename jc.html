@@ -1,0 +1,142 @@
+<!DOCKTYPE html>
+<head>
+<title>Calculator</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+input[type=button]
+{
+width:97;
+height:53;
+margin-top:4px;
+outline:none;
+background-color:white;
+
+font-size:25px;
+border:1px dashed;
+}
+div{
+background-color:brown;
+width:550;
+height:400;
+border:1px dashed;
+border-radius:10px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+.bg{
+ height:600px;
+ width:1320px;
+ background-image:url("11.jpg");
+}
+</style>
+<script>
+$(document).ready(function(e){
+
+  $(".num").click(function(){
+      var a =$(this).val();
+    $(".dis").val($(".dis").val() +a);
+  });
+
+$(".ac").click(function(){
+    $(".dis").val(null);
+  });
+
+$(".eq").click(function(){
+    $(".dis").val(eval($(".dis").val()));
+  });
+
+$(".sin").click(function(){
+    $(".dis").val(Math.sin($(".dis").val()));
+  });
+
+$(".tan").click(function(){
+    $(".dis").val(Math.tan($(".dis").val()));
+  });
+
+$(".cos").click(function(){
+    $(".dis").val(Math.cos($(".dis").val()));
+  });
+
+$(".log").click(function(){
+    $(".dis").val(Math.log($(".dis").val()));
+  });
+
+$(".sq").click(function(){
+    $(".dis").val(Math.pow($(".dis").val(),2));
+  });
+
+$(".pie").click(function(){
+   a=$(".dis").val();
+$(".dis").val(eval(a*3.14));
+  });
+
+$("#back").click(function(){
+var num=$(".dis").val();
+   num=num.substring(0, num.length-1);
+$(".dis").val(num);
+  });
+});
+
+</script>
+</head>
+<body class="bg">
+<center><h1 style=" font-size:100; color:brown;  text-shadow: 4px 4px orange;">Calculator</h1></center>
+<center>
+<div>
+<br>
+<input type="text" style="text-align:right;
+background:white; width:510; height:60; font-size:20;" class="dis" placeholder="0.0 " disabled><br>
+<br>
+<input type="button" id="cv" class="ac" value="AC" style="background:red">
+<br>
+<input type="button" id="cv" class="num" value="7">
+<input type="button" id="cv" class="num" value="8"  >
+<input type="button" id="cv" class="num" value="9">
+<input type="button" id="cv" class="num" value="/" >
+<br>
+<input type="button" id="cv" class="num" value="4">
+<input type="button" id="cv"class="num" value="5" >
+<input type="button" id="cv" class="num" value="6"  >
+<input type="button" id="cv" class="num" value="*">
+<br>
+
+<input type="button" id="cv" class="num" value="1">
+<input type="button" id="cv" class="num" value="2">
+<input type="button" id="cv" class="num" value="3">
+<input type="button" id="cv" class="num" value="-" >
+<br>
+<input type="button" id="cv" class="num" value="." >
+<input type="button" id="cv" class="num" value="0">
+<input type="button" id="cv" class="eq" value="=" style="background:yellow">
+<input type="button" id="cv" class="num" value="+" >
+
+<br>
+</center><br>
+</div>
+</body>
+</html>
